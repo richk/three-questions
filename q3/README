@@ -12,7 +12,7 @@ Finding Cycles:
 Please find more detailed documentation in the code.
 
 Complexity:
-Time Complexity: Time taken is the number of distincts paths found by following the array * number of elements in the array. If the former is denoted by k and latter by n, complexity is O(kn).
+Time Complexity: Time taken is the (number of distincts paths found by following the array * number of elements in the array * (number of elements in the array/BITSPERWORD)). If the first is denoted by k and second by n, complexity is O(kn^2/32).
 Space Compexity: A bit vector is used to keep track of the elements in the array that have been processed, to eliminate the need to process them again. An unsigned integer array is used to implement this bit vector, hence space complexity is (1 + n/BITSPERWORD), where n is the number of elements in the array and BITSPERWORD has value 32, since integer is 4 byte in size.
 
 

@@ -92,7 +92,7 @@ int hasNonUsed(unsigned int used[],int n) {
  * remain to be traversed. All the cycles       *
  * during the traversals are counted and        *
  * returned.                                    *
- * Worst case complexity is O(nk) where n is    *
+ * Worst case complexity is O(kn^2/32), n is    *
  * number of elements in the array and k is     *
  * total number of paths that can be traversed  *
  * through the array                            *
