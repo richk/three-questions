@@ -1,0 +1,23 @@
+#5. Spiral Printing.
+
+Platform:Ubuntu 10.04, 64 bit.
+
+Brief Explanation of Solution:
+  The program prints the elements of the matrix in steps, by first going through all the elements at the highest and lowest row and column indices and working its way inwards. After printing all the elements in the topmost row, rightmost column, bottom most row and leftmost column clockwise, the high and low row and column indices are adjusted to new values to shrink the size of the matrix by one along all 4 directions. The program terminates when the high and low pointers along the row and column dimensions cross each other or are pointing at the same element. In the latter case, the program prints that element before terminating. This is an iterative version of the program. The program can be written in a tail recursive version as well.
+
+Please note that the problem states that the matrix is (n*m). In my program, I assumed it to be an (m*n) matrix.
+
+Complexity:
+Time Complexity: Time taken is the number of elements to be printed which is O(m*n).
+Space Compexity: 4 additional integers are used to keep track of the high and low index along the row and column dimensions at each iteration of the loop. Space Complexity is O(1).
+
+
+Compiling the program:
+gcc -o SpiralPrinting SpiralPrinting.c
+
+Running the program:
+Usage:
+./SpiralPrinting <path to input file>
+
+Example:
+./SpiralPrinting matrix.txt

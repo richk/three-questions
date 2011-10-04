@@ -1,0 +1,21 @@
+#4. String Manipulation:
+
+Platform:Ubuntu 10.04, 64 bit.
+
+Brief Explanation of Solution:
+  The solution works by keeping track of the new length of the string. The characters as that are repeated adjacent to each other or are whitespaces are removed. In addition to length, two more variables move through the string. The variables index into the string, finding elements that meet the above conditions and overwriting them with the ones that don't. At the end, the string is resized to the new length, which includes only the elements that do not pass the above conditions and need to be kept in the string. Thus compaction is done in place.
+
+Complexity:
+Time Complexity: Since compaction is done in one pass over the length of the string, it takes O(n) time to compact the string in place.
+Space Complexity: 3 additional integers are used to keep track of the new length and for comparison. Hence space complexity is O(1).
+
+
+Compiling the program:
+gcc -o StringManipulation StringManipulation.c
+
+Running the program:
+Usage:
+./StringManipulation <path to input file>
+
+Example:
+./StringManipulation sm.txt

@@ -1,0 +1,27 @@
+#3.Following the Pointers:
+
+Platform:Ubuntu 10.04, 64 bit.
+
+Brief Explanation of Solution:
+Following the Pointers:
+  The pointers are followed by simply indexing into the values stored in array elements. For example, starting with index 0, the value at this index is read, and the index of the next element accessed is the value stored at this index and so on. Following all the pointers until the same element is hit where we started from, or a -1 is hit, is referred to as traversal through the elements of the input array.
+
+Finding Cycles:
+  Traversal starts with an element in the array. If the traversal comes back to this element, it is considered a cycle. The program then increments the number of cycles in the graph. If instead, traversal ends on an element with value -1, no cycles are found on that path. In either case, the same element is not traversed twice, since no new information regarding cyclicity will be found by traversing along any edge on an already traversed path twice. A bit vector is used to keep track of elemets that have been traversed, implemented by an array of integers.
+
+Please find more detailed documentation in the code.
+
+Complexity:
+Time Complexity: Time taken is the number of distincts paths found by following the array * number of elements in the array. If the former is denoted by k and latter by n, complexity is O(kn).
+Space Compexity: A bit vector is used to keep track of the elements in the array that have been processed, to eliminate the need to process them again. An unsigned integer array is used to implement this bit vector, hence space complexity is (1 + n/BITSPERWORD), where n is the number of elements in the array and BITSPERWORD has value 32, since integer is 4 byte in size.
+
+
+Compiling the program:
+gcc -o FollowPointers FollowPointers.c
+
+Running the program:
+Usage:
+./FollowPointers <path to input file>
+
+Example:
+./FollowPointers fp.txt
