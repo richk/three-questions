@@ -1,0 +1,65 @@
+Solutions to three interesting problems.
+
+Prolem #3:
+
+#3 - Following the pointers
+
+You are given a puzzle which contains N locations. From each location, you can travel to a maximum of one other location on the puzzle or to a dead end. Your job is to write a program to count how many cycles exist in the puzzle. To clarify, a cycle exists if you can start at a given location and, following the available moves from that location, eventually end up back where you started.
+
+The input your program will be given will be a simplification of the puzzle. The first line of input will indicate how many locations there are in the puzzle, call it N as above. The next N lines show connections between locations. In particular, if line I contains number J, then from location I you can get to location J and only location J. Any location that is a dead end will contain the integer -1. Note that the locations are numbered from 0 to N-1.
+
+Example puzzle:
+ 
+
+For example, consider the following input:
+***
+7
+2
+3
+4
+5
+6
+-1
+0
+***
+Then the output of your program should be:
+***
+1
+***
+
+Problem #4:
+
+#4 – String Manipulation
+
+Write a function to compact a string in place: 
+A.	strip whitespace from the string.
+B.	remove duplicate characters if they are next to each other
+
+For example, consider the following input:
+***
+abb cddpddef gh
+***
+
+Then the output of your program should be:
+***
+abcdpdefgh
+***
+
+Problem #5:
+
+#5 - Spiral printing
+
+Write a function to print a 2-D array (n x m) in spiral order (clockwise).
+
+For example, consider the following input:
+***
+1 2 3 
+4 5 6         
+7 8 9 
+***
+
+Then the output of your program should be:
+***
+1 2 3 6 9 8 7 4 5
+***
+
